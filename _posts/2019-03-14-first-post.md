@@ -1,7 +1,7 @@
 ---
 title: "블로그를 시작하는 이유"
 categories:
-    - prologue
+    - Prologue
 ---
 ## 전공 지식을 남기고 싶다.
 ## 생각을 글로 정리리는 습관을 기르고 싶다.
