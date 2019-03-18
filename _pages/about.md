@@ -16,6 +16,7 @@ author_profile: true
 * Sogang University
     * Mar 2013 - present
     * B.S. in Computer Science and Engineering
+    * CGPA 3.85/4.3 (Overall), 4.08/4.3 (Major Only)
 
 ### Interests
 * Competitive Programming, Problem Solving
@@ -70,4 +71,4 @@ author_profile: true
 * C, C++, STL [Intermediate]
 * Python3, Tensorflow, Pandas, Beautifulsoup [Low Intermediate]
 * HTML, CSS, Javascript, Node.js [Elementary]
-* Languages: Korean [Native], English [Intermediate]
+* Languages - Korean [Native], English [Intermediate]
