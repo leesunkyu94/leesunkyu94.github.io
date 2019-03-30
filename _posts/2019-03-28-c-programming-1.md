@@ -1,4 +1,6 @@
 ---
+layout: single
+classes: wide
 title: "C언어 및 기본문법 소개"
 categories:
     - C-Programming

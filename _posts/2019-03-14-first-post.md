@@ -1,4 +1,6 @@
 ---
+layout: single
+classes: wide
 title: "블로그를 시작하는 이유"
 categories:
     - Prologue
