@@ -38,7 +38,7 @@ author_profile: true
 * Samsung Scholorship for Samsung Semiconductor Track
     * Mar 2019 - present
 * Dean's List (2018-2), College of Engineering, Sogang Univ.
-* 2019 Software Maestro Trainee
+* Trainee, 10th Software Maestro
     * May 2019 - present
 
 ### Work Experience
