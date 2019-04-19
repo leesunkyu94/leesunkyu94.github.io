@@ -25,16 +25,15 @@ author_profile: true
 
 ### Awards and Honors
 
-* 63th place among 533 teams, 2017 ACM-ICPC Daejeon Regional Preliminary Contest
-* 1st place, 2017 Sogang Programming Contest
+* 63th place among 533 teams, [2017 ACM-ICPC Daejeon Regional Preliminary Contest](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD)
+* 1st place, [2017 Sogang Programming Contest](https://www.acmicpc.net/contest/view/266)
 * Finalist, 2018 UCPC (Union of Computer Progrmming Contest Club Contest)
 * Best Engineering prize, 2018 Sogang Hackathon
     * FaceRoulette, Entertainment App using Azure Face API & Kakao API
-* 63th place among 624 teams, 2018 ACM-ICPC Seoul Regional Preliminary Contest
-* Honorable Mention, 2018 ACM-ICPC Seoul Regional
-    * [ICPCID](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD)
+* 63th place among 624 teams, [2018 ACM-ICPC Seoul Regional Preliminary Contest](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD)
+* Honorable Mention, [2018 ACM-ICPC Seoul Regional](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD)
 * 2nd place, 2018 Competition on Korean Information System
-* Special prize for problem-setter, 2018 Sogang Programming Contest
+* Special prize for problem-setter, [2018 Sogang Programming Contest](https://www.acmicpc.net/contest/view/379)
 * Dean's List (2018-1), College of Engineering, Sogang Univ.
 * Samsung Scholorship for Samsung Semiconductor Track
     * Mar 2019 - present
@@ -60,7 +59,7 @@ author_profile: true
 
 ### Additional Experience
 
-* Sogang ACM-ICPC Team
+* [Sogang ACM-ICPC Team](https://acm.sogang.ac.kr/)
     * Mar 2017 - present
     * Prepare for ACM-ICPC
 * Teaching Assistant, Sogang Univ.
