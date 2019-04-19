@@ -37,6 +37,9 @@ author_profile: true
 * Dean's List (2018-1), College of Engineering, Sogang Univ.
 * Samsung Scholorship for Samsung Semiconductor Track
     * Mar 2019 - present
+* Dean's List (2018-2), College of Engineering, Sogang Univ.
+* 2019 Software Maestro Trainee
+    * May 2019 - present
 
 ### Work Experience
 
