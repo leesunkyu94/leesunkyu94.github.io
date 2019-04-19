@@ -32,6 +32,7 @@ author_profile: true
     * FaceRoulette, Entertainment App using Azure Face API & Kakao API
 * 63th place among 624 teams, 2018 ACM-ICPC Seoul Regional Preliminary Contest
 * Honorable Mention, 2018 ACM-ICPC Seoul Regional
+    * [ICPCID](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD)
 * 2nd place, 2018 Competition on Korean Information System
 * Special prize for problem-setter, 2018 Sogang Programming Contest
 * Dean's List (2018-1), College of Engineering, Sogang Univ.
