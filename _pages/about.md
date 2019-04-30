@@ -38,8 +38,6 @@ author_profile: true
 * Samsung Scholorship for Samsung Semiconductor Track
     * Mar 2019 - present
 * Dean's List (2018-2), College of Engineering, Sogang Univ.
-* Trainee, 10th Software Maestro
-    * May 2019 - present
 
 ### Work Experience
 
@@ -68,6 +66,9 @@ author_profile: true
 * 2018 Summer SW Camp Teacher, Sogang Univ.
     * Aug 2018 - Aug 2018
     * SW Education Service for elementary students
+* Trainee, 10th Software Maestro
+    * May 2019 - present
+    * Government-sponsored SW developer training program
 
 ### Skills
 
