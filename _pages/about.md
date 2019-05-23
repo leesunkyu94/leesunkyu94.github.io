@@ -64,15 +64,18 @@ author_profile: true
     * Mar 2017 - Dec 2018
     * TA for Computational Thinking (COR1009) & Introduction to IT (CSW1010)
 * 2018 Summer SW Camp Teacher, Sogang Univ.
-    * Aug 2018 - Aug 2018
+    * Aug 2018
     * SW Education Service for elementary students
 * Trainee, 10th Software Maestro
     * May 2019 - present
     * Government-sponsored SW developer training program
+* Participant, 2019 NAVER CAMPUS HACKDAY SUMMER
+    * May 2019
+    * Hackathon with naver developers
 
 ### Skills
 
 * C, C++, STL [Intermediate]
-* Python3, Tensorflow, Pandas, Beautifulsoup [Low Intermediate]
+* Python3, Tensorflow, Pandas, Beautifulsoup [Elementary]
 * HTML, CSS, Javascript, Node.js [Elementary]
 * Languages - Korean [Native], English [Intermediate]
