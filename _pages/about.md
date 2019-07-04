@@ -9,14 +9,15 @@ author_profile: true
 ## JungYeon Sohn
 
 * Undergraduate Student
-* sjy20131565 [at] gmail [dot] com
+* Major in Computer Science and Engineering
+* Email: sjy20131565 [at] gmail [dot] com
 
 ### Education
 
-* Sogang University
+* [Sogang University](http://sogang.ac.kr)
     * Mar 2013 - present
     * B.S. in Computer Science and Engineering
-    * CGPA 3.85/4.3 (Overall), 4.08/4.3 (Major Only)
+    * CGPA 3.86/4.3 (Overall), 4.06/4.3 (Major Only)
 
 ### Interests
 * Competitive Programming, Problem Solving
