@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "JungYeon Sohn"
   avatar           : "/images/author/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "컴퓨터공학을 좋아하는 대학생"
+  bio              : "컴퓨터공학을 좋아하는 학부생"
   location         : "Seoul, Republic of Korea"
   email            : "sjy20131565@gmail.com"
   links:
