@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "생각을 정리하는 블로그"
+title                    : "이선규의 금융공학 블로그"
 title_separator          : "-"
-name                     : "JungYeon Sohn"
-description              : "잡다한 생각을 정리하는 블로그입니다."
-url                      : "https://sjy366.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Sun-kyu Lee"
+description              : ""
+url                      : "https://leesunkyu94.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -31,7 +31,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : sjy366-github-io # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : leesunkyu94-github-io # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -106,11 +106,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "JungYeon Sohn"
+  name             : "Sun-kyu Lee"
   avatar           : "/images/author/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "컴퓨터공학을 좋아하는 학부생"
+  bio              : "KAIST 금융공학 석사과정생"
   location         : "Seoul, Republic of Korea"
-  email            : "sjy20131565@gmail.com"
+  email            : "sunkyulee@kaist.ac.kr"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -123,13 +123,13 @@ author:
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://facebook.com/profile.php?id=100000042083163"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/sjy366"
+      url: "https://github.com/leesunkyu94"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://instagram.com/leesunkyu94"
 
 # Site Footer
 footer:
@@ -139,10 +139,10 @@ footer:
       # url:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://facebook.com/profile.php?id=100000042083163"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/sjy366"
+      url: "https://github.com/leesunkyu94"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -151,7 +151,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://instagram.com/leesunkyu94"
 
 
 # Reading Files
