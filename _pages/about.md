@@ -45,41 +45,40 @@ author_profile: true
 
 ### Work Experience
 
-* Defense Security Command, Republic of Korea
+* 212 Regiment, Republic of Korea
     * Jun 2014 - Jun 2016
     * Military Service
     * Maintain computer equipment and software
-* Alluser.net, Seoul, Republic of Korea
-    * Jan 2018 - Feb 2018
-    * Software Engineering Intern
-    * Conduct a seminar on basic concepts of deep neural network & reinforcement learning
-* NLP lab (Sogang Univ.), Seoul, Republic of Korea
-    * Jul 2018 - Oct 2018
-    * Research Intern
-    * Conduct a seminar on basic concepts of dependency parsing
-    * Web demo development for competition
+* Standard Chartered, Seoul, Republic of Korea
+    * Jan 2017 - Apr 2017
+    * Corporate Finance Center
+    * intern
+* Indigowave (Financial Data Processing LAB), Seoul, Republic of Korea
+    * May 2018 - present
+    * Algorithm Trading Programming
+    * Foreign Derivatives(Future and Option) trading
+    * building an Algorithm Trading system
 
 ### Additional Experience
-
-* [Sogang ACM-ICPC Team](https://acm.sogang.ac.kr/)
-    * Mar 2017 - present
-    * Prepare for ACM-ICPC
+* Publishing Application (Sogang TIME)
+   *(https://www.sg-alumni.org/page/bbs/board.php?bo_table=b03&wr_id=15&sfl=wr_subject&stx=%EC%9D%B4%EC%84%A0%EA%B7%9C&sop=and)
+   *(https://pf.kakao.com/_EnjQu)
+* [Sogang Wise Investment Club]
+    * Aug 2016 - present
+    * Research for Wise Trading and Valuation
 * Teaching Assistant, Sogang Univ.
-    * Mar 2017 - Dec 2018
-    * TA for Computational Thinking (COR1009) & Introduction to IT (CSW1010)
-* 2018 Summer SW Camp Teacher, Sogang Univ.
-    * Aug 2018
-    * SW Education Service for elementary students
-* Trainee, 10th Software Maestro
-    * May 2019 - present
-    * Government-sponsored SW developer training program
-* Participant, 2019 NAVER CAMPUS HACKDAY SUMMER
-    * May 2019
-    * Hackathon with naver developers
+    * Mar 2019 - Jul 2019
+    * Big Data programming (STS2011)
+* Technical Assistant, Sogang Univ.
+    * Mar 2017 - Jul 2019
+    * Maintain computer equipment and software
+* Published a paper, KIISE(Korea Institute of Information Science and Engineering)
+    * Jul 2019
+    * Forecast of Delisting Companies Using Gradient Boosting Classifier
+
 
 ### Skills
-
-* C, C++, STL [Intermediate]
-* Python3, Tensorflow, Pandas, Beautifulsoup [Elementary]
+* Python3, Tensorflow, Pandas, numpy, Beautifulsoup [Intermediate]
+* C, C++ [Intermediate]
 * HTML, CSS, Javascript, Node.js [Elementary]
 * Languages - Korean [Native], English [Intermediate]
