@@ -8,26 +8,31 @@ author_profile: true
 
 ## JungYeon Sohn
 
-* Undergraduate Student
-* Major in Computer Science and Engineering
-* Email: sjy20131565 [at] gmail [dot] com
+* A Student Undertaking a Master’s degree
+* B.S. Computer Science and Engineering 
+* B.S. Business (Finance and Accounting)
+* Email: leesunkyu94 [at] naver [dot] com
 
 ### Education
 
 * [Sogang University](http://sogang.ac.kr)
-    * Mar 2013 - present
+    * Mar 2013 - Aug 2019
     * B.S. in Computer Science and Engineering
-    * CGPA 3.86/4.3 (Overall), 4.06/4.3 (Major Only)
+    * B.S. Business (Finance and Accounting)
 
 ### Interests
-* Competitive Programming, Problem Solving
+* Financial Engineering
+* Quantitative Finance
+* Big Data Programming
 * Machine Learning, Reinforcement Learning
-* Web Development
+
 
 ### Awards and Honors
 
-* [63th place among 533 teams](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD), 2017 ACM-ICPC Daejeon Regional Preliminary Contest
-* 1st place, 2017 Sogang Programming Contest
+* Qualifying, 2017 Dongbu Financial Essay Competition
+* [63th place among 25 teams], 2018 rotman-UNIST trading competition (http://ciet.unist.ac.kr/%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8c/2018-2/%ea%b2%b0%ea%b3%bc/) 2nd place in ETF algorithm trading,3nd plcae Electric futures trading, 3nd place Crude oil trading
+
+
 * Finalist, 2018 UCPC (Union of Computer Progrmming Contest Club Contest)
 * Best Engineering prize, 2018 Sogang Hackathon
     * FaceRoulette, Entertainment App using Azure Face API & Kakao API
