@@ -6,7 +6,7 @@ permalink: /about/
 author_profile: true
 ---
 
-## JungYeon Sohn
+## Sun-kyu Lee
 
 * A Student Undertaking a Master’s degree
 * B.S. Computer Science and Engineering 
@@ -18,7 +18,7 @@ author_profile: true
 * [Sogang University](http://sogang.ac.kr)
     * Mar 2013 - Aug 2019
     * B.S. in Computer Science and Engineering
-    * B.S. Business (Finance and Accounting)
+    * B.S. in Business (Finance and Accounting)
 
 ### Interests
 * Financial Engineering
@@ -29,21 +29,19 @@ author_profile: true
 
 ### Awards and Honors
 
-* Qualifying, 2017 Dongbu Financial Essay Competition
-* [63th place among 25 teams], 2018 rotman-UNIST trading competition (http://ciet.unist.ac.kr/%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8c/2018-2/%ea%b2%b0%ea%b3%bc/) 2nd place in ETF algorithm trading,3nd plcae Electric futures trading, 3nd place Crude oil trading
+* Qualifying, 2017 Dongbu Financial Essay Competition (Fund Suggestions About Startup Investment)
+* [7th place among 25 teams], 2018 rotman-UNIST trading competition (http://ciet.unist.ac.kr/%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8c/2018-2/%ea%b2%b0%ea%b3%bc/)
+   * 2nd place in ETF Arbitrage algorithm trading
+   * 3rd plcae Electric futures trading
+   * 3rd place Crude oil futures trading
+* Qualifying, 2018 Dongbu Financial Essay Competition (Proposal for option trading through K200 index prediction using MLP algorithm)
+* [6th place among 25 teams], 2019 rotman-UNIST trading competition (http://ciet.unist.ac.kr/%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8c/2019-2/rutc-2019/)
+   * 5th place in Statical Arbitrage algorithm trading
+   * 2nd plcae Crude oil futures trading
+* Qualifying, 2019 Dongbu Financial Essay Competition (Forecast of Delisting Companies Using Decision Trees)
 
+* Major Certification in Corporate Finance Analytics, 2018-2 Sognag Business School
 
-* Finalist, 2018 UCPC (Union of Computer Progrmming Contest Club Contest)
-* Best Engineering prize, 2018 Sogang Hackathon
-    * FaceRoulette, Entertainment App using Azure Face API & Kakao API
-* [63th place among 624 teams](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD), 2018 ACM-ICPC Seoul Regional Preliminary Contest
-* [Honorable Mention](https://icpc.baylor.edu/ICPCID/5EAVXY28D1SD), 2018 ACM-ICPC Seoul Regional
-* 2nd place, 2018 Competition on Korean Information System
-* Special prize for problem-setter, 2018 Sogang Programming Contest
-* Dean's List (2018-1), College of Engineering, Sogang Univ.
-* Samsung Scholorship for Samsung Semiconductor Track
-    * Mar 2019 - present
-* Dean's List (2018-2), College of Engineering, Sogang Univ.
 
 ### Work Experience
 
