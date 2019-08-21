@@ -21,7 +21,7 @@ author_profile: true
     * B.S. in Business (Finance and Accounting)
 * [Korea Advanced Institute of Science and Technology](http://kaist.ac.kr)
    * Aug 2019 - present
-    * M.S. in Financial Engineering
+   * M.S. in Financial Engineering
 ### Interests
 * Financial Engineering
 * Quantitative Finance
@@ -34,15 +34,15 @@ author_profile: true
 * Qualifying, 2017 Dongbu Financial Essay Competition (Fund Suggestions About Startup Investment)
 * [7th place among 25 teams], 2018 rotman-UNIST trading competition (http://ciet.unist.ac.kr/%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8c/2018-2/%ea%b2%b0%ea%b3%bc/)
    * 2nd place in ETF Arbitrage algorithm trading
-   * 3rd plcae Electric futures trading
+   * 3rd place Electric futures trading
    * 3rd place Crude oil futures trading
 * Qualifying, 2018 Dongbu Financial Essay Competition (Proposal for option trading through K200 index prediction using MLP algorithm)
 * [6th place among 25 teams], 2019 rotman-UNIST trading competition (http://ciet.unist.ac.kr/%ed%8a%b8%eb%a0%88%ec%9d%b4%eb%94%a9-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8c/2019-2/rutc-2019/)
    * 5th place in Statical Arbitrage algorithm trading
-   * 2nd plcae Crude oil futures trading
+   * 2nd place Crude oil futures trading
 * Qualifying, 2019 Dongbu Financial Essay Competition (Forecast of Delisting Companies Using Decision Trees)
 
-* Major Certification in Corporate Finance Analytics, 2018-2 Sognag Business School
+* Major Certification in Corporate Finance Analytics, 2018-2 Sogang Business School
 
 
 ### Work Experience
