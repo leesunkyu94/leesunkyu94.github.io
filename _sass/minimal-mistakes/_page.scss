@@ -18,7 +18,10 @@
     max-width: $x-large;
   }
 }
-
+.center {
+  display: block;
+  margin: auto;
+}
 .page {
   @include breakpoint($large) {
     float: right;
