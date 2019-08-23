@@ -61,7 +61,7 @@ def get_daily_price(code):
         'isu_cd': code,
         'adj_stkprc': 'Y',
         'fromdate': '19800101',
-        'todate': '20190208',
+        'todate': '20190823',
     }
     
     r = requests.get(gen_otp_url, params=gen_otp_data)
