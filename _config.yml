@@ -123,13 +123,13 @@ author:
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/profile.php?id=100000042083163"
+      url: "" #"https://facebook.com/profile.php?id=100000042083163"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/leesunkyu94"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/leesunkyu94"
+      url: "" #"https:""/instagram.com/leesunkyu94"
 
 # Site Footer
 footer:
