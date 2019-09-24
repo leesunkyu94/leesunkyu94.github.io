@@ -59,7 +59,7 @@ author_profile: true
     * May 2018 - present
     * Algorithm Trading Programming
     * Foreign Derivatives(Future and Option) trading
-    * building an Algorithm Trading system
+    * building an Algorithm Trading system by using Kiwoom API
 
 ### Additional Experience
 * Publishing Application (Sogang TIME)
@@ -75,6 +75,7 @@ author_profile: true
     * Mar 2017 - Jul 2019
     * Maintain computer equipment and software
 * Published a paper, KIISE(Korea Institute of Information Science and Engineering)
+    * (https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08763709)
     * Jul 2019
     * Forecast of Delisting Companies Using Gradient Boosting Classifier
 
