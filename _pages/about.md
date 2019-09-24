@@ -10,7 +10,7 @@ author_profile: true
 
 * A Student Undertaking a Master’s degree
 * B.S. Computer Science and Engineering 
-* B.S. Business (Finance and Accounting)
+* B.A. Business (Finance and Accounting)
 * Email: leesunkyu94 [at] naver [dot] com
 
 ### Education
@@ -22,6 +22,7 @@ author_profile: true
 * [Korea Advanced Institute of Science and Technology](http://kaist.ac.kr)
    * Aug 2019 - present
    * M.S. in Financial Engineering
+   
 ### Interests
 * Financial Engineering
 * Quantitative Finance
@@ -67,7 +68,7 @@ author_profile: true
    * (https://pf.kakao.com/_EnjQu)
 * [Sogang Wise Investment Club]
     * Aug 2016 - present
-    * Research for Wise Trading and Valuation
+    * Research for Trading and Valuation
 * Teaching Assistant, Sogang Univ.
     * Mar 2019 - Jul 2019
     * Big Data programming (STS2011)
