@@ -52,3 +52,7 @@ for i in range(1,len(change_point)-1):
 monthly_return_data=(monthly_return_data.T)
 monthly_return_data.to_csv("K200_monthly_return.csv", encoding='CP949')
 {% endhighlight %}
+
+그럼 아래 사진과 같이 저장이 된다.
+
+<center><img src="/images/make_data/monthly_return.PNG" ></center>
