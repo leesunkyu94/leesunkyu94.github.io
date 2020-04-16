@@ -18,7 +18,7 @@ author_profile: true
 * [Sogang University](http://sogang.ac.kr)
     * Mar 2013 - Aug 2019
     * B.S. in Computer Science and Engineering
-    * B.S. in Business (Finance and Accounting)
+    * B.A. in Business (Finance and Accounting)
 * [Korea Advanced Institute of Science and Technology](http://kaist.ac.kr)
    * Aug 2019 - present
    * M.S. in Financial Engineering
@@ -79,7 +79,11 @@ author_profile: true
     * (https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08763709)
     * Jul 2019
     * Forecast of Delisting Companies Using Gradient Boosting Classifier
-
+* Copyright registration, Korea Copyright Commision
+    * https://www.copyright.or.kr/main.do
+    * Mar 2020
+    * Futures Automatic Pair Trading System (Registration Number : C-2020-008135)
+    
 
 ### Skills
 * Python3, Tensorflow, Pandas, numpy, Beautifulsoup [Intermediate]
