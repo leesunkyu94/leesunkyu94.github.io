@@ -66,7 +66,7 @@ author_profile: true
 * Publishing Application (Sogang TIME)
    * (https://www.sg-alumni.org/page/bbs/board.php?bo_table=b03&wr_id=15&sfl=wr_subject&stx=%EC%9D%B4%EC%84%A0%EA%B7%9C&sop=and)
    * (https://pf.kakao.com/_EnjQu)
-* [Sogang Wise Investment Club]
+* Sogang Wise Investment Club
     * Aug 2016 - present
     * Research for Trading and Valuation
 * Teaching Assistant, Sogang Univ.
