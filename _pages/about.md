@@ -60,8 +60,9 @@ author_profile: true
     * May 2018 - present
     * Algorithm Trading Programming
     * Foreign Derivatives(Future and Option) trading
-    * building an Algorithm Trading system by using Kiwoom API
-
+    * building an Algorithm Trading system by using Kiwoom Foreign Derivative and Futures API and Interactive Brokers API
+    * Collect tic data by using Kiwoom Korea Stock API
+    
 ### Additional Experience
 * Publishing Application (Sogang TIME)
    * (https://www.sg-alumni.org/page/bbs/board.php?bo_table=b03&wr_id=15&sfl=wr_subject&stx=%EC%9D%B4%EC%84%A0%EA%B7%9C&sop=and)
