@@ -75,7 +75,9 @@ for i in range(len(pyoeng_list)):
 apt_data_pd
 {% endhighlight %}
 위와 같이 코딩을 하면 "pyoengNames"안에 들어있던 평수리스트가 하나씩 분리가 된다.
-pyoeng_list로 따로 변수명을 선언한 이유는 저 순서대로 데이터를 긁을 필요가 많기때문에 따로 설정하였다.
+
+pyoeng_list로 따로 변수명을 선언한 이유는 저 순서대로 데이터를 긁을 필요가 많기때문에 따로설정하였다.
+
 결과는 아래와 같이 dataframe으로 깔끔하게 저장이 된다.
 <center><img src="/images/make_data/crawl7.JPG" ></center>
 
@@ -165,8 +167,11 @@ def get_apt_list(dong_code):
 {% endhighlight %}
 
 get_sido_info()의 함수는 서울시, 경기도, 부산시...등의 특별시와 도의 고유코드를 list 형식으로 return 해주는 함수이다.
+
 get_gungu_info(sido_code)함수는 get_sido_info()에서 return받은 리스트의 값중 하나를 함수 인자로 넣으면 시/군/구의 고유코드를 list 형식으로 return 해주는 함수이다.
+
 get_dong_info(gungu_code)함수는 get_gungu_info(sido_code)에서 return받은 리스트의 값중 하나를 함수 인자로 넣으면 읍/면/동의 고유코드를 list 형식으로 return 해주는 함수이다.
+
 get_apt_list(dong_code)함수는 get_dong_info(gungu_code)에서 return받은 리스트의 값중 하나를 함수 인자로 넣으면 아파트의 고유코드를 list 형식으로 return 해주는 함수이다.
 
 즉 LG개포자이의 고유 코드는 아래와 같이 구할수 있는 것이다.
@@ -250,6 +255,7 @@ def apt_price(apt_code,index):
     return temp_price
 {% endhighlight %}
 get_school_info(apt_code) 함수는 apt_code에 아파트 고유 코드를 str형태로 넣으면 학군정보를 return해준다.
+
 apt_price(apt_code,index) 함수는 apt_code에 아파트 고유 코드를 str형태로 넣고, index에 위에 선언한 pyoeng_list의 인덱스를 넣으면 가격정보를 return해준다.
 
 아래는 내가 전국 아파트의 정보를 긁은 코드이다. 참고하실분은 참고하면된다.
@@ -434,4 +440,5 @@ for m in range(len(sido_list)):
 {% endhighlight %}
 
 시도, 시군구, 동면읍 아파트 별로 빈 리스트를 만들어 그 리스트 안에 DataFrame으로 저장하고 나중에 한꺼번에 concat하는 원리이다.
+
 네이버 부동산에서 빈데이터가 return되면 멈추는 현상이 있어 데이터 저장 시점마다 try문을 넣어 빈칸을 저장하도록 하였다.
