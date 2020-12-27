@@ -16,11 +16,11 @@ categories:
 예를들어 배당락 전날 종가가 10000원이고 예상 배당이 500원이면 배당락인 다음날 시가는 9500원일 것이다. 하지만 통계적으로 배당락의 시가보다 종가가 더 높으므로 종가가 9700원이 되었다고 가정하고, 배당금이 예상과 다르게 450원으로 결정 되었다고 하자. 이때 투자자는 배당락 종가에 팔았다고 하면 투자자의 순익은 9700원*(1-0.0025)- 10000원 +450(1-0.154)=56.45원이 순익이 되는것이다.(Time Value of Money는 제외하고 계산) 이때 0.0025는 거래세 이고 0.154는 배당소득세이다. 즉 투자자의 수익률은 0.56%이고 이는 해볼만한 투자인것이다.
 
 
-<center><img src="/images/dividend_stra/div_stra_ex.PNG" ></center>
+<center><img src="/images/dividend_stra/div_stra_ex.png" ></center>
 
 
 이러한 투자전략은 세가지로 나눌수 있는다 아래 사진과 같다.
-<center><img src="/images/dividend_stra/strategy.PNG" ></center>
+<center><img src="/images/dividend_stra/strategy.png" ></center>
 
 위의 세가지 전략을 한국시장 20년 데이터로 시뮬레이션 해보고 통계를 내보자.
 
@@ -218,35 +218,220 @@ for i in range(len(arr)-100):
         ex_dividend_date.append(arr[i])
         
 {% endhighlight %}
-이때 사용한 방법은 일별 종가를 저장할때 장이 열린날만 저장하도록 했는데 배당락은 그 해의 영업일 종료 2영업일 전이다.
-그러므로 위의 코드와 같이 저장하면된다.
+이때 사용한 방법은 일별 종가를 저장할때 장이 열린날만 저장하도록 했는데 그 데이터가 저장된 폴더의 리스트를 가져와 장이 열린날을 저장하였다.
+배당락은 그 해의 영업일 종료 2영업일 전이기 때문데 위의 코드와 같이 저장하면된다. 
+또한 배당금 입금일은 4월 10일 전후로 입금이 되는데 각 주식의 정확한 입금일은 다 다르므로, 배당락 이후 70거래일로 일괄 설정하였다.
 
+## 사용할 데이터 만들기
 
-
-월별 수익률은 (t시점 월말종가/t-1시점 월말종가)-1 이므로 아래와 같이 월말 인덱스를 따로 저장한다.
+우리가 사용할 데이터는 배당락 전날, 배당락일, 배당금입금일, 배당금 이 네가지 데이터를 사용해야한다. 이는 아래 코드와 같이 가져올수 있다.
 
 {% highlight python %}
+#######배당락 전일 주가
+price_data=pd.read_csv("D:\코스피종가\\"+ex_dividend_date_eve[i],encoding="CP949") ####배당락 전일
+price_data=price_data[["현재가","종목코드","종목명"]]
+price_data.columns=["배당락전일종가","종목코드","종목명"]
+price_data=price_data.set_index("종목코드")
+########## 배당금 입금일 주가
+price_data2=pd.read_csv("D:\코스피종가\\"+dividend_deposit_day[i],encoding="CP949") ####배당락 전일
+price_data2=price_data2[["현재가","종목코드","종목명"]]
+price_data2.columns=["배당락입금일종가","종목코드","종목명"]
+price_data2=price_data2.set_index("종목코드")
+########## 배당락일 시가 종가
+price_data3=pd.read_csv("D:\코스피종가\\"+ex_dividend_date[i],encoding="CP949") ####배당락 전일
+price_data3=price_data3[["현재가","시가","종목코드","종목명"]]
+price_data3.columns=["배당락일_종가","배당락일_시가","종목코드","종목명"]
+price_data3=price_data3.set_index("종목코드")
+####### 배당금 데이터
+div_data=pd.read_csv("C:\\Users\LEE\Desktop\KRX\\"+ex_dividend_date_eve[i][:4]+"배당.csv",encoding="CP949")
+div_data=div_data[["종목코드","종목명","주당배당금"]]
+div_data=div_data.set_index("종목코드")
+price_data=price_data.join(div_data[["주당배당금"]],how="outer")
+price_data=price_data.join(price_data2[["배당락입금일종가"]],how="outer")
+price_data=price_data.join(price_data3[["배당락일_종가","배당락일_시가"]],how="outer")
+price_data=price_data.loc[price_data["배당락전일종가"].dropna().index].fillna(0) ## 중간에 상장폐지 됐다면 0
+{% endhighlight %}
+이때 인덱스 i는 배당락 일을 계산할때 연도별 배당락일의 인덱스이다. 즉 i=0 일때 아래 사진과 같이 데이터가 저장된다.
+<center><img src="/images/dividend_stra/div_data1.JPG" ></center>
+이때 주의해야할점은 배당금 입금일 종가 데이터가 없을때는 몇가지 경우가 있다.
+1.상장폐지를 당했다.
+2.자진상장폐지를 하였다.
+3.인수합병되었다.(우선주가 본주에 합병되는것도 포함)
+4.청산되었다.
+등의 경우로 나눌 수 있는데 보수적으로 시뮬레이션 하기위해 이는 전부 100%손해로 시뮬레이션 하였다.
+
+또한 주식분할, 주식병합, 무상증자, 주식배당, 액면분할등으로 인한 주가 변화는 그 기간동안 매우 적은 샘플이기 때문에 정상주가라고 가정하고 시뮬레이션 하였다.(종목 2000개 이상)
+
+## 데이터를 이용하여 수익률 계산
+
+위의 데이터를 반복문을 이용하여 연도별로 수익률을 구해보는 코드는 아래와 같다. 이때 벤치마크는 동기간 코스피 수익률이다. 거래세는 0.3%로 가정하였고 배당소득세는 15.4%로 가정 하였다.
+
+코스피, 코스닥 전종목을 Equal weighted로 보유 했다고 가정한 수익률이다. 예를들어 삼성전자, LG전자, 하이닉스가 코스피 코스닥 전종목이라면 각각 100만원씩 총 300만원의 포트폴리오를 가지고있다는 전략이다.
+{% highlight python %}
+div_return_data_raw=[0]*20
+div_return_result=pd.DataFrame(index=range(2000,2019,1),columns=["전략1","전략2","전략3","전략1_벤치마크","전략2_벤치마크","전략3_벤치마크"])
+market_data=pd.read_csv("market.csv",encoding="CP949").set_index("날짜")
+transaction_tax=0.003
+dividend_income_tax=0.154
+for i in range(5,25,1):
+    #######배당락 전일 주가
+    price_data=pd.read_csv("D:\코스피종가\\"+ex_dividend_date_eve[i],encoding="CP949") ####배당락 전일
+    price_data=price_data[["현재가","종목코드","종목명"]]
+    price_data.columns=["배당락전일종가","종목코드","종목명"]
+    price_data=price_data.set_index("종목코드")
+    ########## 배당금 입금일 주가
+    price_data2=pd.read_csv("D:\코스피종가\\"+dividend_deposit_day[i],encoding="CP949") ####배당락 전일
+    price_data2=price_data2[["현재가","종목코드","종목명"]]
+    price_data2.columns=["배당락입금일종가","종목코드","종목명"]
+    price_data2=price_data2.set_index("종목코드")
+    ########## 배당락일 시가 종가
+    price_data3=pd.read_csv("D:\코스피종가\\"+ex_dividend_date[i],encoding="CP949") ####배당락 전일
+    price_data3=price_data3[["현재가","시가","종목코드","종목명"]]
+    price_data3.columns=["배당락일_종가","배당락일_시가","종목코드","종목명"]
+    price_data3=price_data3.set_index("종목코드")
+    ####### 배당금 데이터
+    div_data=pd.read_csv("C:\\Users\LEE\Desktop\KRX\\"+ex_dividend_date_eve[i][:4]+"배당.csv",encoding="CP949")
+    div_data=div_data[["종목코드","종목명","주당배당금"]]
+    div_data=div_data.set_index("종목코드")
+    price_data=price_data.join(div_data[["주당배당금"]],how="outer")
+    price_data=price_data.join(price_data2[["배당락입금일종가"]],how="outer")
+    price_data=price_data.join(price_data3[["배당락일_종가","배당락일_시가"]],how="outer")
+    ##### 배당락전일 종가 매수 배당락일 시가매도
+    price_data["배당락일_시가매도_수익금"]=price_data["배당락일_시가"]*(1-transaction_tax)-price_data["배당락전일종가"]+price_data["주당배당금"]*(1-dividend_income_tax)
+    price_data["배당락일_시가매도_수익률"]=price_data["배당락일_시가매도_수익금"].dropna()/price_data["배당락전일종가"]
+    ### 아웃라이어 제거
+    price_data["배당락일_시가매도_수익률"]=price_data[abs(price_data["배당락일_시가매도_수익률"])<1.01]["배당락일_시가매도_수익률"]
+    price_data=price_data.loc[price_data["배당락전일종가"].dropna().index].fillna(0) ## 중간에 상장폐지 됐다면 0
+    #####################################################
+    ##### 배당락전일 종가 매수 배당락일 종가매도
+    price_data["배당락일_종가매도_수익금"]=price_data["배당락일_종가"]*(1-transaction_tax)-price_data["배당락전일종가"]+price_data["주당배당금"]*(1-dividend_income_tax)
+    price_data["배당락일_종가매도_수익률"]=price_data["배당락일_종가매도_수익금"].dropna()/price_data["배당락전일종가"]
+    ### 아웃라이어 제거
+    price_data["배당락일_종가매도_수익률"]=price_data[abs(price_data["배당락일_종가매도_수익률"])<1.01]["배당락일_종가매도_수익률"]
+    #####################################################
+    ##### 배당락전일 종가 매수 입금일 종가매도
+    price_data["배당입금일_종가매도_수익금"]=price_data["배당락입금일종가"]*(1-transaction_tax)-price_data["배당락전일종가"]+price_data["주당배당금"]*(1-dividend_income_tax)
+    price_data["배당입금일_종가매도_수익률"]=price_data["배당입금일_종가매도_수익금"].dropna()/price_data["배당락전일종가"]
+    ### 아웃라이어 제거
+    price_data["배당입금일_종가매도_수익률"]=price_data[abs(price_data["배당입금일_종가매도_수익률"])<3]["배당입금일_종가매도_수익률"]
+    #####################################################
+    div_return_data_raw[i-5]=price_data
+    div_return_result.loc[2000+i-5,"전략1"]=price_data["배당락일_시가매도_수익률"].mean()
+    div_return_result.loc[2000+i-5,"전략1_벤치마크"]=market_data.loc[int(ex_dividend_date[i][:8])]["시가"]/market_data.loc[int(ex_dividend_date_eve[i][:8])]["종가"]-1
+    div_return_result.loc[2000+i-5,"전략2"]=price_data["배당락일_종가매도_수익률"].mean()
+    div_return_result.loc[2000+i-5,"전략2_벤치마크"]=market_data.loc[int(ex_dividend_date[i][:8])]["종가"]/market_data.loc[int(ex_dividend_date_eve[i][:8])]["종가"]-1    
+    div_return_result.loc[2000+i-5,"전략3"]=price_data["배당입금일_종가매도_수익률"].mean()
+    div_return_result.loc[2000+i-5,"전략3_벤치마크"]=market_data.loc[int(dividend_deposit_day[i][:8])]["종가"]/market_data.loc[int(ex_dividend_date_eve[i][:8])]["종가"]-1
+div_return_result["전략1_알파"]=div_return_result["전략1"]-div_return_result["전략1_벤치마크"]
+div_return_result["전략2_알파"]=div_return_result["전략2"]-div_return_result["전략2_벤치마크"]
+div_return_result["전략3_알파"]=div_return_result["전략3"]-div_return_result["전략3_벤치마크"]
 
 {% endhighlight %}
 
-그리고 위에서 저장한 월말 인덱스를 이용하여 각 월별 수익률을 DataFrame으로 저장하여 csv로 저장한다.
-
+위 코드의 실행 결과인 div_return_result의 결과는 아래 사진과 같다.
+<center><img src="/images/dividend_stra/div_data2.jpg" ></center>
+위의 코드를 좀더 보기 쉽게 아래코드를 이용하여 평균과 표준편차를 구하면
 {% highlight python %}
-i=0
-monthly_return_data=daily_data.iloc[change_point[i+1]]/daily_data.iloc[change_point[i]]-1
-monthly_return_data=(monthly_return_data).to_frame()
-monthly_return_data.columns = [str(int(daily_data.index[change_point[i+1]]))[:-2]]
+cols=div_return_result.columns
+for i in range(div_return_result.shape[1]):
+    div_return_result.loc["평균수익률",cols[i]]=div_return_result[cols[i]].mean()
+    div_return_result.loc["표준편차",cols[i]]=div_return_result[cols[i]].std()
+{% endhighlight %}
+아래 사진과 같다.
+<center><img src="/images/dividend_stra/div_data3.JPG" ></center>
 
-for i in range(1,len(change_point)-1):
-    monthly_return_data2=daily_data.iloc[change_point[i+1]]/daily_data.iloc[change_point[i]]-1
+표를 분석해보면 전략3은 전종목을 배당락 전날 종가에 매수하여 배당금 입금일 일괄 매도 한다는 전략인데 약 5%의 초과 수익을 내었다. 하지만 이는 홀드하고 있으면 돈을 번다는 의미보단 시가총액이 작은 종목들이 더 올랐다는 의미로 받아 들어야한다. 즉 파마프렌치의 팩터중 SMB(Small Minus Big)의 영향인듯 보인다. 작은 기업의 수익률이 큰 기업의 수익률보다 큰 걸 뜻한다.
 
-    monthly_return_data2=(monthly_return_data2).to_frame()
-    monthly_return_data2.columns = [str(int(daily_data.index[change_point[i+1]]))[:-2]]
-    monthly_return_data=monthly_return_data.join(monthly_return_data2)
-monthly_return_data=(monthly_return_data.T)
-monthly_return_data.to_csv("K200_monthly_return.csv", encoding='CP949')
+하지만 전략2의 수익률은 약 1% 정도로 약 3개월간의 입금 기간을 고려하면 연환산 수익률로 4%이다. 이는 꽤 좋은 수익률로 괜찮은 투자법으로 보인다.
+
+
+아래 사진은 매년 전략별 수익률을 히스토그램으로 표현한 사진이다.
+<center><img src="/images/dividend_stra/image.jpg" ></center>
+
+위의 사진을 만드는 코드는 아래와 같다.
+{% highlight python %}
+plt.figure(figsize=(20,150))
+for i in range(20):
+    plt.subplot(20,3,3*i+1)
+    plt.hist(div_return_data_raw[i]["배당락일_시가매도_수익률"],bins=50)
+    plt.xlabel("Return",fontsize=15)
+    plt.ylabel("N",fontsize=15)
+    plt.title(ex_dividend_date_eve[i+5][:4]+"_Strategy1",fontsize=20)
+
+    plt.subplot(20,3,3*i+2)
+    plt.hist(div_return_data_raw[i]["배당락일_종가매도_수익률"],bins=50)
+    plt.xlabel("Return",fontsize=15)
+    plt.ylabel("N",fontsize=15)
+    plt.title(ex_dividend_date_eve[i+5][:4]+"_Strategy2",fontsize=20)
+    
+    plt.subplot(20,3,3*i+3)
+    plt.hist(div_return_data_raw[i]["배당입금일_종가매도_수익률"],bins=50)
+    plt.xlabel("Return",fontsize=15)
+    plt.ylabel("N",fontsize=15)
+    plt.title(ex_dividend_date_eve[i+5][:4]+"_Strategy3",fontsize=20)
+
+plt.tight_layout()
+plt.savefig('image.jpg')
+plt.show()
 {% endhighlight %}
 
-그럼 아래 사진과 같이 저장이 된다.
+위의 사진을 보면 2019년에 비해 2000년의 표준편차가 더 큰걸 볼수 있다. 즉 시장이 점점 효율적으로 변하면서 예상 배당금 만큼 투자자들이 행동한다는 것을 알 수 있다.
 
-<center><img src="/images/make_data/monthly_return.PNG" ></center>
+
+## 종목별 전략 수익률
+
+
+아래의 코드는 삼성전자의 수익률을 2000부터 2019년까지 나타 낼 수 있는 코드이다.
+{% highlight python %}
+stock_name="SK텔레콤"
+stock_return_result=pd.DataFrame(index=range(2000,2019,1),columns=["전략1","전략2","전략3"])
+stock_code=div_return_data_raw[19][div_return_data_raw[19]["종목명"]==stock_name].index[0]
+print(stock_code)
+for i in range(19,-1,-1):
+    try:
+        stock_return_result.loc[int(ex_dividend_date_eve[i+5][:4]),"전략1"]=div_return_data_raw[i].loc[stock_code]["배당락일_시가매도_수익률"]
+        stock_return_result.loc[int(ex_dividend_date_eve[i+5][:4]),"전략2"]=div_return_data_raw[i].loc[stock_code]["배당락일_종가매도_수익률"]
+        stock_return_result.loc[int(ex_dividend_date_eve[i+5][:4]),"전략3"]=div_return_data_raw[i].loc[stock_code]["배당입금일_종가매도_수익률"]
+    except KeyError:
+        pass
+stock_return_result.loc["수익률평균","전략1"]=stock_return_result["전략1"].mean()
+stock_return_result.loc["수익률평균","전략2"]=stock_return_result["전략2"].mean()
+stock_return_result.loc["수익률평균","전략3"]=stock_return_result["전략3"].mean()
+stock_return_result
+{% endhighlight %}
+위 코드의 결과는 아래와 같다. 
+<center><img src="/images/dividend_stra/div_data4.JPG" ></center>
+SK텔레콤은 우리나라 시장의 대표적인 배당주로 배당투자의 정석이라고 볼수 있다. SK텔레콤은 전략1이 전략2보다 더 나은 성과를 보이는데, 이는 단기 투자자들의 매물이 다음날에 몰리는 경향때문일것이라고 예상한다.
+
+위의 코드를 이용하여 2020년 12월 24일 기준 시가총액 상위 50개 기업의 과거 20년 전략별 수익률을 코드로 나타내면 아래와 같다.
+
+{% highlight python %}
+recent_marketcap=pd.read_csv("D:\코스피종가\\"+arr[-1],encoding="CP949")
+N=50
+stock_list=recent_marketcap["종목코드"].iloc[:N]
+stock_name_list=recent_marketcap["종목명"].iloc[:N]
+stock_result=pd.DataFrame(columns=["전략1","전략2","전략3"])
+for code in stock_list:
+    stock_return_result=pd.DataFrame(index=range(2000,2019,1),columns=["전략1","전략2","전략3"])
+    for i in range(19,-1,-1):
+        try:
+            stock_return_result.loc[int(ex_dividend_date_eve[i+5][:4]),"전략1"]=div_return_data_raw[i].loc[code]["배당락일_시가매도_수익률"]
+            stock_return_result.loc[int(ex_dividend_date_eve[i+5][:4]),"전략2"]=div_return_data_raw[i].loc[code]["배당락일_종가매도_수익률"]
+            stock_return_result.loc[int(ex_dividend_date_eve[i+5][:4]),"전략3"]=div_return_data_raw[i].loc[code]["배당입금일_종가매도_수익률"]
+        except KeyError:
+            pass
+    stock_return_result.loc["수익률평균","전략1"]=stock_return_result["전략1"].mean()
+    stock_return_result.loc["수익률평균","전략2"]=stock_return_result["전략2"].mean()
+    stock_return_result.loc["수익률평균","전략3"]=stock_return_result["전략3"].mean()
+    stock_result.loc[code]=stock_return_result.loc["수익률평균"]
+{% endhighlight %}
+
+위 코드의 결과는 아래 사진과 같다. 
+<center><img src="/images/dividend_stra/div_result1.png" ></center>
+
+전략1의 평균은 0.2%, 전략2의 평균은 0.6%, 전략3의 평균은 5%가 나왔다. 하지만 전략3은 survivor bias로 인하여 정확한 결과 해석이 어렵고, 전략2의 평균인 0.6%는 연환산으로 2.4%이익이므로 과거 20년 평균 이자율 수준이다.
+<center><img src="/images/dividend_stra/interest_rate.jpg" ></center>
+즉 변동성을 고려하고 배당금을 받을때까지 투자금의 공백을 생각한다면 단기 배당 투자는 좋은 투자법이 아니라는 결론을 얻을 수 있다.
+
+하지만 장기 투자자 입장에서는 매도하지 않고 자본이익이 발생하므로 배당투자는 매우 효율적인 투자법이라고 할 수 있다. 
+
