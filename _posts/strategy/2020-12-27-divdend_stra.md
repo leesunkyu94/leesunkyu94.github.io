@@ -381,7 +381,7 @@ plt.show()
 ## 종목별 전략 수익률
 
 
-아래의 코드는 삼성전자의 수익률을 2000부터 2019년까지 나타 낼 수 있는 코드이다.
+아래의 코드는 SK텔레콤의 수익률을 2000부터 2019년까지 나타 낼 수 있는 코드이다.
 {% highlight python %}
 stock_name="SK텔레콤"
 stock_return_result=pd.DataFrame(index=range(2000,2019,1),columns=["전략1","전략2","전략3"])
