@@ -28,7 +28,7 @@ categories:
 
 먼저 어떤 데이터를 이용하게 될지 모르니 KRX market data에서 20년치 일별 종가를 긁어오자.
 [KRX 시가총액 상위 링크](https://marketdata.krx.co.kr/mdi#document=040402)
-<center><img src="/images/dividend_stra/market_data1.jpg" ></center>
+<center><img src="/images/dividend_stra/market_data1.JPG" ></center>
 위의 링크를 타고 가거나 사진처럼 들어가면 일별 시가총액 상위종목을 1위부터 꼴찌 까지 볼수 있다. 즉 이 데이터를 2000년 1월 1일까지 하나하나 손으로 받아 csv파일로 저장하면 좋겠지만 그건 불가능하다. 그래서 크롤링을 이용하여 모든 날의 데이터를 받아보자
 
 아래 코드는 오늘을 기준으로 하여 과거 전체 데이터를 받는 코드이다.
@@ -105,7 +105,7 @@ for i in range(0,100000,1):
 
 배당금 데이터는 아래 사진에 나온것처럼 통계->주식->투자참고->PER/PBR/배당수익률 탭에서 볼수 있다.
 
-<center><img src="/images/dividend_stra/market_data2.jpg" ></center>
+<center><img src="/images/dividend_stra/market_data2.JPG" ></center>
 
 
 이때 2019년 기말 배당금은 2020년 5월이 지나고 알 수 있으니 2019 배당 데이터는 2020년 5월 이후의 데이터에서 가져와야한다. 
@@ -329,7 +329,7 @@ div_return_result["전략3_알파"]=div_return_result["전략3"]-div_return_resu
 {% endhighlight %}
 
 위 코드의 실행 결과인 div_return_result의 결과는 아래 사진과 같다.
-<center><img src="/images/dividend_stra/div_data2.jpg" ></center>
+<center><img src="/images/dividend_stra/div_data2.JPG" ></center>
 위의 코드를 좀더 보기 쉽게 아래코드를 이용하여 평균과 표준편차를 구하면
 {% highlight python %}
 cols=div_return_result.columns
