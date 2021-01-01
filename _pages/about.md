@@ -18,7 +18,7 @@ author_profile: true
 * [Sogang University](http://sogang.ac.kr)
     * Mar 2013 - Aug 2019
     * B.S. in Computer Science and Engineering
-    * B.A. in Business (Finance and Accounting)
+    * B.A. in Business (Finance and Accounting) Double Major
 * [Korea Advanced Institute of Science and Technology](http://kaist.ac.kr)
    * Aug 2019 - present
    * M.S. in Financial Engineering
