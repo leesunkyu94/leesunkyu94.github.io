@@ -11,7 +11,7 @@ author_profile: true
 * A Student Undertaking a Master’s degree
 * B.S. Computer Science and Engineering 
 * B.A. Business (Finance and Accounting)
-* Email: leesunkyu94 [at] naver [dot] com
+* Email: leesunkyu94@naver.com, sunkyulee@kaist.ac.kr
 
 ### Education
 
