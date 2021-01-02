@@ -15,7 +15,7 @@ categories:
 
 수정주가는 과거에 투자한 자금 대비 현재 주가가 어느정도 수준에 와 있는지 알아보는 것이기 때문에 배당을 고려하는것이 매우 중요하다. 
 
-[수정주가를 산출하는법](https://leesunkyu94.github.io/data%20%EB%A7%8C%EB%93%A4%EA%B8%B0/make_adj_data/)
+[이전포스팅 수정주가를 산출하는법](https://leesunkyu94.github.io/data%20%EB%A7%8C%EB%93%A4%EA%B8%B0/make_adj_data/)
 
 
 
@@ -98,6 +98,7 @@ SK텔레콤은 1995년 5월8일 기준 -121271원을 투자하면 2020년12월24
 위의 데이터를 받고 싶은 사람은 아래 링크 클릭
 
 [1995년5월8일~2020년12월24일 코스피 코스닥 전종목 수정주가 배당미포함](https://drive.google.com/file/d/1aIdjnUl1aRW7xbAhYtf_756Zy5LUO4Yq/view?usp=sharing)
+
 [1995년5월8일~2020년12월24일 코스피 코스닥 전종목 수정주가 배당포함](https://drive.google.com/file/d/1EGsdhcyYXXlU7w74TyXICzRn02YkbKC-/view?usp=sharing)
 
 
