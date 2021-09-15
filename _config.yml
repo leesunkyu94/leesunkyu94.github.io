@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "올리고 싶은것만 올리는 블로그"
+title                    : ""
 title_separator          : "-"
 name                     : "Sun Kyu Lee"
 description              : ""
@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Sun-kyu Lee"
   avatar           : "/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "KAIST 금융공학 석사과정 학생"
+  bio              : ""
   location         : "Seoul, Republic of Korea"
   email            : "sunkyulee@kaist.ac.kr"
   links:
