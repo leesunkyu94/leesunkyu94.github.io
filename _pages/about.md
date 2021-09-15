@@ -8,10 +8,11 @@ author_profile: true
 
 ## Sun-kyu Lee
 
-* A Student Undertaking a Master’s degree
+* Miraeasset Securities Global Index Trading Team Quant Programmer
 * B.S. Computer Science and Engineering 
 * B.A. Business (Finance and Accounting)
-* Email: leesunkyu94@naver.com, sunkyulee@kaist.ac.kr
+* M.S. Financial Engineering
+* Email: leesunkyu94@naver.com, sunkyulee@kaist.ac.kr, sunkyu.lee@miraeasset.com
 
 ### Education
 
@@ -20,15 +21,18 @@ author_profile: true
     * B.S. in Computer Science and Engineering
     * B.A. in Business (Finance and Accounting) Double Major
 * [Korea Advanced Institute of Science and Technology](http://kaist.ac.kr)
-   * Aug 2019 - present
+   * Aug 2019 - Aug 2021
    * M.S. in Financial Engineering
-   
+   * Master Thesis : ETF Trading Strategy: An Empirical Study using High Frequency Data
+
+
 ### Interests
 * Financial Engineering
 * Quantitative Finance
 * Big Data Programming
 * Machine Learning, Reinforcement Learning
-
+* High Frequency Trading
+* Arbitrage Trading
 
 ### Awards and Honors
 
@@ -57,12 +61,17 @@ author_profile: true
     * Corporate Finance Center
     * intern
 * Indigowave (Financial Data Processing LAB), Seoul, Republic of Korea
-    * May 2018 - present
+    * May 2018 - May 2021
     * Algorithm Trading Programming
     * Foreign Derivatives(Future and Option) trading
     * building an Algorithm Trading system by using Kiwoom Foreign Derivative and Futures API and Interactive Brokers API
     * Collect tic data by using Kiwoom Korea Stock API
-    
+* Miraeasset Securities, Passive Solution, Global Index Trading Team, Seoul, Republic of Korea
+   * June 2021 - Present
+   * Algorithm, High Frequency Trading System Programming
+
+
+
 ### Additional Experience
 * Publishing Application (Sogang TIME)
    * (https://www.sg-alumni.org/page/bbs/board.php?bo_table=b03&wr_id=15&sfl=wr_subject&stx=%EC%9D%B4%EC%84%A0%EA%B7%9C&sop=and)
@@ -87,7 +96,6 @@ author_profile: true
     
 
 ### Skills
-* Python3, Tensorflow, Pandas, numpy, Beautifulsoup [Intermediate]
-* C, C++ [Intermediate]
-* HTML, CSS, Javascript, Node.js [Elementary]
+* Python, C, C++, VB [Intermediate]
+* HTML, CSS, Javascript, Node.js, C# [Elementary]
 * Languages - Korean [Native], English [Intermediate]
